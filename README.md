@@ -1,2 +1,3 @@
 # AVAX-Poster-Generator
-Generate poster with Qr code for Avalanche Wallet addresses
+
+Generates a poster with your Public Wallet Sddress, plus Avalanche Logo and some Text. 
