@@ -5,13 +5,13 @@
     /* this affects the margin in the printer settings */ 
     margin: 20mm 20mm 20mm 20mm;  
 } 
-.print .logo {
+.print .wifi {
   text-align: center;
 }
-.print .logo img {
+.print .wifi img {
   width: 3cm;
 }
-.print .avax {
+.print .ssid {
   text-align: center;
   font-size: 70px;
   font-weight: bold;
@@ -32,8 +32,9 @@
   width: 100%;
   text-align: center;
 }
-.scan {
-  font-size: 25px;
+.source {
+  font-size: 10pt;
+  font-style: italic;
   width: 100%;
   text-align: center;
   margin-top: 0.5cm;
