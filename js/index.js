@@ -22,14 +22,32 @@ function escape_string (string) {
         
 function generate() {
 
-		var avax = $('#avax').val();
-		var address = $('#address').val();
-		var scan = $('#scan').val();
-		var key = $('#key').val();
+		var ssid = $('#ssid').val();
+		var encryption = $('#encryption').val();
+		var hidden = $('#hidden').is(':checked');
+		var hide_key = $('#hide-key').is(':checked');
 
-		var qrstring = escape_string(address);
+		if (encryption != 'nopass') {
+				var key = $('#key').val();
+		} else {
+				var key = '';
+		}
 
-		$('.print .avax .text').text(avax);
+		var qrstring = 
+			'WIFI:S:' + 
+			escape_string(ssid) +
+			';T:' +
+			encryption +
+			';P:' +
+			escape_string(key) + ';';
+
+		if (hidden) {
+				qrstring += 'H:true';
+		}
+
+		qrstring += ';';
+
+		$('.print .ssid .text').text(ssid);
 		$('.print .key .text').text(key);
 
 		$('#qrcode').empty();
@@ -38,8 +56,12 @@ function generate() {
 			height: 520,
 			text: qrstring
 		});
-		
-		$('.print .scan .text').text(scan);
+
+		if (hide_key) {
+			$('.print .key').hide();
+		} else {
+			$('.print .key').show();
+		}
 
 		print(); 
 };
