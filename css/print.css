@@ -5,13 +5,13 @@
     /* this affects the margin in the printer settings */ 
     margin: 20mm 20mm 20mm 20mm;  
 } 
-.print .wifi {
+.print .logo {
   text-align: center;
 }
-.print .wifi img {
+.print .logo img {
   width: 3cm;
 }
-.print .ssid {
+.print .avax {
   text-align: center;
   font-size: 70px;
   font-weight: bold;
@@ -28,13 +28,18 @@
 }
 
 #qrcode {
-  margin-top: 1cm;
+  margin-top: 0.75cm;
   width: 100%;
   text-align: center;
 }
-.source {
-  font-size: 10pt;
-  font-style: italic;
+.scan {
+  font-size: 25px;
+  width: 100%;
+  text-align: center;
+}
+
+.address {
+  font-size: 15px;
   width: 100%;
   text-align: center;
   margin-top: 0.5cm;
